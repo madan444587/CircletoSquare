@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Madan Lal - Shape Toggle</title>
+  <style>
+    body {
+      background: linear-gradient(to right, #ffecd2, #fcb69f);
+      font-family: 'Segoe UI', sans-serif;
+      text-align: center;
+      padding-top: 50px;
+    }
+
+    h1 {
+      font-size: 32px;
+      color: #fff;
+      background: linear-gradient(to right, #ff6f61, #de6161);
+      padding: 20px;
+      border-radius: 12px;
+      display: inline-block;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    #shape {
+      width: 150px;
+      height: 150px;
+      background-color: #4ecdc4;
+      margin: 40px auto;
+      border-radius: 50%;
+      transition: border-radius 0.4s ease, transform 0.4s ease;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+    }
+
+    button {
+      padding: 12px 24px;
+      font-size: 16px;
+      background-color: #ff6f61;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #e94e3b;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Madan Lal - ID: 36653</h1>
+
+  <div id="shape"></div>
+
+  <button onclick="toggleShape()">Toggle Shape</button>
+
+  <script>
+    const shape = document.getElementById('shape');
+    let isCircle = true;
+
+    function toggleShape() {
+      if (isCircle) {
+        shape.style.borderRadius = "0%";
+        shape.style.transform = "rotate(15deg)";
+      } else {
+        shape.style.borderRadius = "50%";
+        shape.style.transform = "rotate(0deg)";
+      }
+      isCircle = !isCircle;
+    }
+  </script>
+
+</body>
+</html>
